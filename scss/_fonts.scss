@@ -1,15 +1,29 @@
 @font-face {
-	font-family: "PTSans";
-	src: url("../font/PTSansRegular.woff") format("woff");
+	font-family: "GraphikLCTT";
+	src: url("../fonts/GraphikLCTT-Regular.woff") format("woff");
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
 }
 @font-face {
-	font-family: "PTSans";
-	src: url("../font/PTSansBold.woff") format("woff");
+	font-family: "GraphikLCTT";
+	src: url("../fonts/GraphikLCG-Medium.woff") format("woff");
 	font-style: normal;
-	font-weight: 700;
+	font-weight: 500;
+	font-display: swap;
+}
+@font-face {
+	font-family: "SharpGroteskMedium25-Regular";
+	src: url("../fonts/SharpGroteskMedium25-Regular.woff") format("woff");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: "SharpGroteskMedium20";
+	src: url("../fonts/SharpGroteskMedium20.woff") format("woff");
+	font-style: normal;
+	font-weight: 500;
 	font-display: swap;
 }
 

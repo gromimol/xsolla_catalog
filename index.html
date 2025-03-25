@@ -1,36 +1,582 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-	<!-- Template Basic Images End -->
-	
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
-	<link rel="stylesheet" href="css/style.css">
-
-	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://x.la/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Xsolla Catalog</title>
 </head>
 <body>
 	<div class="wrapper">
 		<header class="header">
-			
-		</header>
+            <a href="https://x.la/" class="logo">
+                <img src="img/logo.svg" alt="Xsolla Points" />
+            </a>
+            <ul class="menu">
+                <!-- for mobile -->
+                 <li class="menu__toggle">
+                    <div class="title">Menu</div>
+                    <div class="close">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292894 1.70711C-0.0976312 1.31658 -0.0976312 0.683417 0.292894 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579L14.2929 0.292893C14.6834 -0.0976311 15.3166 -0.0976311 15.7071 0.292893C16.0976 0.683417 16.0976 1.31658 15.7071 1.70711L9.41421 8L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L8 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292893 15.7071C-0.0976309 15.3166 -0.0976309 14.6834 0.292893 14.2929L6.58579 8L0.292894 1.70711Z" fill="white"/>
+                        </svg>                            
+                    </div>
+                 </li>
+                <li>
+                    <a href="https://x.la/#top-up">Top up</a>
+                </li>
+                <li class="has-submenu">
+                    <span>Play</span>
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://x.la/#game-store">Game store</a>
+                        </li>
+                        <li>
+                            <a href="https://x.la/metasites">Metasites</a>
+                        </li>
+                        <li>
+                            <a href="https://x.la/#cloud-gaming">Xsolla Cloud Gaming</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <span>Earn</span>
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://x.la/#free-rewards">Free rewards</a>
+                        </li>
+                        <li>
+                            <a href="https://x.la/gold">Xsolla Gold</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <span>Join</span>
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://x.la/xpn">Creator Programs</a>
+                        </li>
+                        <li>
+                            <a href="https://x.la/">Xsolla Mall</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="burger">
+                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 0C0.447715 0 0 0.447715 0 1C0 1.55228 0.447715 2 1 2H19C19.5523 2 20 1.55228 20 1C20 0.447715 19.5523 0 19 0H1Z" fill="white"/>
+                    <path d="M0 7C0 6.44771 0.447715 6 1 6H19C19.5523 6 20 6.44771 20 7C20 7.55228 19.5523 8 19 8H1C0.447715 8 0 7.55228 0 7Z" fill="white"/>
+                    <path d="M0 13C0 12.4477 0.447715 12 1 12H19C19.5523 12 20 12.4477 20 13C20 13.5523 19.5523 14 19 14H1C0.447715 14 0 13.5523 0 13Z" fill="white"/>
+                </svg>                    
+            </div>
+        </header>
 		<main class="main">
-			
+            <div class="first-screen">
+                <div class="container">
+                    <div class="first-screen__content">
+                        <div class="h1">
+                            Turn your gaming into rewards
+                        </div>
+                        <div class="first-screen__subtitle">
+                            Install games, earn Xsolla Points,<br /> and use them for future purchases
+                        </div>
+                        <div class="btns-container">
+                            <a href="#unlock-items" class="btn js--scroll-to-unlock">Unlock items</a>
+                            <a href="#unlock-items" class="btn btn--opacity">Learn more</a>
+                        </div>
+                    </div>
+                    <div class="first-screen__bg">
+                        <picture>
+                            <!-- Для экранов больше 2000px -->
+                            <source media="(min-width: 2001px)" srcset="img/main_bg_2500.png">
+                            
+                            <!-- Для экранов больше 1800px, но меньше 2001px -->
+                            <source media="(min-width: 1801px)" srcset="img/main_bg_1920.png">
+                            
+                            <!-- Для мобильных экранов (767px и меньше) -->
+                            <source media="(max-width: 767px)" srcset="img/main_bg_mobile.png">
+                            
+                            <!-- Изображение по умолчанию для остальных экранов -->
+                            <img src="img/main_bg.png" alt="Games" width="1440" height="480">
+                        </picture>
+                    </div> 
+                </div>
+
+                <div data-ball data-start-time="0" class="ball ball--1"></div>
+                <div data-ball data-start-time="2" class="ball ball--2"></div>             
+                <div data-ball data-start-time="1" class="ball ball--3"></div>             
+                <div data-ball data-start-time="5" class="ball ball--4"></div>             
+                <div data-ball data-start-time="4" class="ball ball--5"></div> 
+            </div>
+            <!-- /.first-screen -->
+             <div class="container">
+                <div class="card-wrapper">
+                    <div class="card-filter flex align-center justify-between">
+                        <div class="card-filter__sort flex align-center">
+                            <div class="sort-title">
+                                Items catalog
+                            </div>
+                            <div class="sort-btns">
+                                <button class="btn btn--sm active" data-filter="all">
+                                    All
+                                 </button>
+                                 <button class="btn btn--sm" data-filter="virtual-items">
+                                     Virtual items
+                                 </button>
+                                 <button class="btn btn--sm" data-filter="currency">
+                                     Currency
+                                 </button>
+                                 <button class="btn btn--sm" data-filter="bundles">
+                                     Bundles
+                                 </button>
+                            </div>
+                        </div>
+                        <div class="card-filter__search">
+                            <div class="search-field">
+                                <button type="submit" class="search-field__btn">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 7.5C3.75 5.42893 5.42893 3.75 7.5 3.75C9.57107 3.75 11.25 5.42893 11.25 7.5C11.25 9.57107 9.57107 11.25 7.5 11.25C5.42893 11.25 3.75 9.57107 3.75 7.5ZM7.5 2.25C4.60051 2.25 2.25 4.60051 2.25 7.5C2.25 10.3995 4.60051 12.75 7.5 12.75C8.67925 12.75 9.76769 12.3612 10.6441 11.7048L14.4697 15.5303C14.7626 15.8232 15.2374 15.8232 15.5303 15.5303C15.8232 15.2374 15.8232 14.7626 15.5303 14.4697L11.7048 10.6441C12.3612 9.76769 12.75 8.67925 12.75 7.5C12.75 4.60051 10.3995 2.25 7.5 2.25Z" fill="currentColor"/>
+                                    </svg>                                        
+                                </button>
+                                <input type="search" class="search-field__input" placeholder="Enter game title" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-filter -->
+                    <div class="card-list">
+                        <div class="card" data-category="virtual-items">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/1.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Starter kit
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/1.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Caliber </div>
+                                        <div class="title">
+                                            Caliber
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="virtual-items">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/2.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Some name
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/2.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Caliber </div>
+                                        <div class="title">
+                                            Long name of the game
+                                        </div>
+                                        <div class="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, odio.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="bundles">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/3.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Jon MacCalister
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/1.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Masonry Little </div>
+                                        <div class="title">
+                                            Masonry
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $12 or 930</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="bundles">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/1.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Twisted Metal
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/1.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Roblox </div>
+                                        <div class="title">
+                                            Roblox Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, odio!
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="virtual-items">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/3.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Starter kit
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/1.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Caliber </div>
+                                        <div class="title">
+                                            Runescape
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="bundles">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/2.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Starter kit
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/2.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Caliber </div>
+                                        <div class="title">
+                                            Caliber
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="bundles">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/1.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Starter kit
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/1.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Caliber </div>
+                                        <div class="title">
+                                            Caliber
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="virtual-items">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/1.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Twisted Metal
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/1.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Roblox </div>
+                                        <div class="title">
+                                            Roblox Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, odio!
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="bundles">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/2.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Starter kit
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/2.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Caliber </div>
+                                        <div class="title">
+                                            Caliber
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="bundles">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/1.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Twisted Metal
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/1.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Roblox </div>
+                                        <div class="title">
+                                            Roblox Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, odio!
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card" data-category="virtual-items">
+                            <div class="card__top">
+                                <div class="card__top__img">
+                                    <img src="img/items/2.png" alt="">
+                                </div>
+                                <div class="card__top__title">
+                                    Starter kit
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__body__row">
+                                    <div class="avatar">
+                                        <img src="img/avatars/2.jpg" alt="">
+                                    </div>
+                                    <div class="card__body__row__content">
+                                        <div class="name">Caliber </div>
+                                        <div class="title">
+                                            Caliber
+                                        </div>
+                                        <div class="descr">Battle together with friends, or find new ones. Lorem ipsum dolor sit amet.</div>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn btn--grey">
+                                    <span>Unlock for $30 or 300</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.card-list -->
+                    <div class="no-results" style="display: none;">
+                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.16667 20.3333C6.16667 12.5093 12.5093 6.16667 20.3333 6.16667C28.1574 6.16667 34.5 12.5093 34.5 20.3333C34.5 28.1574 28.1574 34.5 20.3333 34.5C12.5093 34.5 6.16667 28.1574 6.16667 20.3333ZM20.3333 0.5C9.37969 0.5 0.5 9.37969 0.5 20.3333C0.5 31.287 9.37969 40.1667 20.3333 40.1667C24.7883 40.1667 28.9002 38.6979 32.2112 36.2181L46.6632 50.6701C47.7697 51.7766 49.5637 51.7766 50.6701 50.6701C51.7766 49.5637 51.7766 47.7697 50.6701 46.6632L36.2181 32.2112C38.6979 28.9002 40.1667 24.7883 40.1667 20.3333C40.1667 9.37969 31.287 0.5 20.3333 0.5Z" fill="white"/>
+                        </svg>                            
+                        <div class="no-results__title">No results found</div>
+                        <p>Try again with different filters or keywords</p>
+                    </div>
+                     <div class="load-more-wrapper flex justify-center">
+                        <div class="load-more">
+                            Load More 
+                            <span>
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 0.65625C6.75 0.293813 6.41421 0 6 0C5.58579 0 5.25 0.293813 5.25 0.65625V9.43934L1.28033 5.46967C0.987437 5.17678 0.512563 5.17678 0.21967 5.46967C-0.0732233 5.76256 -0.0732233 6.23744 0.21967 6.53033L5.46967 11.7803C5.76256 12.0732 6.23744 12.0732 6.53033 11.7803L11.7803 6.53033C12.0732 6.23744 12.0732 5.76256 11.7803 5.46967C11.4874 5.17678 11.0126 5.17678 10.7197 5.46967L6.75 9.43934V0.65625Z" fill="currentColor"/>
+                                </svg>                                
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ./.container -->
+
+            <div class="container">
+                <div class="faq">
+                    <div class="faq__title">faq</div>
+                    <div class="accordion-container">
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <div class="accordion-header__title">What are Xsolla Points?</div>
+                            <div class="accordion-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 16L5 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="accordion-content">
+                            <p>Xsolla Points are a virtual currency that converts into discounts to purchase games and add-ons. You can earn Xsolla Points by completing various activities on Xsolla platforms.</p>
+                          </div>
+                        </div>
+                      
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <div class="accordion-header__title">How to spend Xsolla Points?</div>
+                            <div class="accordion-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 16L5 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="accordion-content">
+                            <p>You can spend your Xsolla Points to get a discount while making a purchase with Xsolla. To do so, log in to Xsolla Pay during the purchase process. A corresponding Xsolla Points block will be displayed during checkout if your merchant supports Xsolla Points. The discount will be applied automatically....</p>
+                          </div>
+                        </div>
+                      
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <div class="accordion-header__title">How to earn Xsolla Points?</div>
+                            <div class="accordion-icon">
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 9L12 16L5 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="accordion-content">
+                            <p>Xsolla Points are rewarded to users by completing the activities on <a href="https://xsolla.com/offerwall">Offerwall</a>. Points are generally awarded to users 24 hours after activity.</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <!-- /.faq -->
+            </div>
 		</main>
-		<footer class="footer"></footer>
+		<footer class="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <a href="https://x.la/" class="logo">
+                        <img src="img/logo.svg" alt="Xsolla" />
+                    </a>
+
+                    <div class="footer__wrapper__right">
+                    <div class="footer__text">All rights reserved, 2025. This site uses cookies.</div>
+                        <ul class="footer__list">
+                            <li>
+                                <a href="https://x.la/privacy-policy" target="_blank">
+                                    Privacy policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://x.la/terms-of-use" target="_blank">Terms of use</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <svg class="bottom-bg" width="1440" height="968" viewBox="0 0 1440 968" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.3" filter="url(#filter0_f_126_5475)">
+                <ellipse cx="774.189" cy="582.601" rx="774.189" ry="582.601" transform="matrix(0.973852 0.227186 0.379092 -0.925359 359.867 1312.23)" fill="#5008F7"/>
+                </g>
+                <g filter="url(#filter1_f_126_5475)">
+                <path d="M1679.52 1586.44C1600.74 1900.8 1037.78 1969.99 770.269 1902.96C1002.55 1562.95 329.106 1582.13 407.883 1267.77C486.66 953.41 1351.7 1726.28 1337.79 895.854C1605.3 962.89 1758.3 1272.07 1679.52 1586.44Z" fill="url(#paint0_linear_126_5475)"/>
+                </g>
+                <defs>
+                <filter id="filter0_f_126_5475" x="167.303" y="0.230347" width="2334.74" height="1897.54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="190.768" result="effect1_foregroundBlur_126_5475"/>
+                </filter>
+                <filter id="filter1_f_126_5475" x="96.2059" y="590.626" width="1909.24" height="1640.88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                <feGaussianBlur stdDeviation="152.614" result="effect1_foregroundBlur_126_5475"/>
+                </filter>
+                <linearGradient id="paint0_linear_126_5475" x1="642.598" y1="1513.83" x2="1349.44" y2="1261.86" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#8F00FF"/>
+                <stop offset="1" stop-color="#FF005B"/>
+                </linearGradient>
+                </defs>
+            </svg>
+        </footer>
+        <video id="sourceVideoBall" src="img/Red_1000_px.mp4" loop muted playsinline hidden></video>         
 	</div><!-- end wrapper -->
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="js/slick.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 </html>

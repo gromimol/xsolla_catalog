@@ -1,0 +1,277 @@
+.card-filter {
+    margin-bottom: max(2.8rem, 20px);
+
+    &__sort {
+        gap: 10px;
+    }
+}
+.sort-title {
+    font-size: max(3.6rem, 24px);
+    font-weight: 500;
+}
+.sort-btns {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+
+    .btn {
+        background: var(--grey-dark);
+        color: #fff;
+        &.active {
+            background: var(--violet);
+        }
+    }
+}
+.card-filter__search {
+    width: calc(33% - 1.2rem);
+}
+.search-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    &__input {
+        display: block;
+        width: 100%;
+        font-size: max(1.4rem, 12px);
+        padding: .79em 1.1428em .79em 40px;
+        border-radius: 8px;
+        color: #fff;
+        background: var(--grey-dark);
+        outline: none;
+        border: 1px solid transparent;
+        transition: all .2s;
+        &:focus {
+            background: #0B0910;
+            border-color: var(--violet);
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 36px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        flex: none;
+        color: #A2A0A9;
+        background: transparent;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        transition: all .2s;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+    margin-bottom: 24px;
+}
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    &__top {
+        background: #37314A;
+        padding: 1.2rem;
+        text-align: center;
+        color: #fff;
+
+        &__img {
+            height: 190px;
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+        &__title {
+            font-size: max(1.6rem, 14px);
+            margin-top: 1em;
+        }
+    }
+
+    &__body {
+        padding: 1.6rem;
+        background: #2C2640;
+
+        .btn {
+            width: 100%;
+            background: #4C475D;
+            font-size: max(12px, 1.4rem);
+            padding: 0.93em 2.5em;
+            border-radius: 10px;
+            &:hover {
+                background: var(--accent-color);
+            }
+
+            span {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                &::after {
+                    content: '';
+                    width: 1.4em;
+                    aspect-ratio: 1 / 1;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background: url('../img/orb_mini.png') no-repeat center center;
+                    background-size: contain;
+                    position: relative;
+                    top: -1px;
+                }
+
+            }
+        }
+
+        &__row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: max(1.5rem, 12px);
+
+            .avatar {
+                width: 56px;
+                height: 56px;
+                flex: none;
+                border-radius: 8px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &__content {
+                width: calc(100% - 64px);
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .name {
+                    font-size: max(1.3rem, 12px);
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.5);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                .title {
+                    font-size: max(1.6rem, 14px);
+                    font-weight: 500;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                .descr {
+                    font-size: max(1.4rem, 13px);
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, 0.5);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+
+        }
+    }
+}
+.load-more {
+    font-size: max(1.6rem, 14px);
+    color: var(--accent-color);
+    padding: 1.2rem 2rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 8px;
+    gap: .5em;
+    transition: all .3s;
+    &:hover {
+        color: var(--grey-dark);
+        background: var(--accent-color);
+    }
+}
+
+.sort-btns .btn.active {
+    background-color: #5540F7;
+    color: white;
+}
+
+/* Блок "No results found" */
+.no-results {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.no-results svg {
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.no-results .no-results__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.no-results p {
+    color: var(--light-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Анимация загрузки для кнопки Load More */
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.load-more.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+
+.card {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.card-wrapper{
+    position: relative;
+}
+.card-list {
+    min-height: 200px;
+}
+.highlight {
+    background-color: rgba(85, 64, 247, 0.8);
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 0 2px;
+}

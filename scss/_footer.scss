@@ -1,4 +1,33 @@
 /*Footer*/ 
 .footer{
-	
+    font-size: 14px;
+    font-weight: 400;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__right {
+            display: flex;
+            align-items: center;
+            gap: 38.4px
+        }
+    }
+    .logo {
+        line-height: 0;
+    }
+}
+.footer__list {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    a {
+        &:hover {
+            color: var(--accent-color);
+        }
+    }
+}
+.footer__text {
+    color: var(--light-color)
 }

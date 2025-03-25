@@ -1,14 +1,28 @@
 :root{
-}
-html, body{
-	min-height: 100%;
+	--main-font: 'GraphikLCTT', sans-serif;
+	--secondary-font: 'SharpGroteskMedium25-Regular', sans-serif;
+	--bold-font: 'SharpGroteskMedium20', sans-serif;
+	--main-color: #070708;
+	--main-color-light: #020203;
+	--accent-color: #A6F20D;
+	--light-color: rgba(255, 255, 255, 0.7);
+	--lighter-color: rgba(255, 255, 255, 0.55);
+	--grey: #3A3641;
+	--grey-dark: #3A3641;
+	--violet: #6939F9;
 }
 html{
-	font-size: 16px;
+	font-size: 10px;
 }
 body{
-	background-color: #fff;
-	color: #000;
+	background-color: #211C30;
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: 500;
+	line-height: 1.125;
+	font-family: var(--main-font);
+	overflow-x: hidden !important;
+	width: 100vw;
 }
 img{
 	max-width: 100%;
@@ -18,18 +32,39 @@ a{
 	transition: all .2s;
 }
 h1, .h1{
-	font-size: 2.25rem;
+	font-size: 9.6rem;
+	font-family: var(--secondary-font);
+	line-height: 1;
 }
 h2, .h2{
-	font-size: 1.5rem;
+	font-size: 6rem;
+	font-family: var(--secondary-font);
+	line-height: 1;
 }
 h3, .h3{
-	font-size: 1.375rem;
+	font-size: 2.5rem;
+	font-family: var(--secondary-font);
+}
+h4, .h4 {
+	font-size: 2rem;
+	font-family: var(--secondary-font);
+}
+.main-font {
+	font-family: var(--main-font);
+}
+.text {
+	font-size: 1.8rem;
+	line-height: 1.38;
+}
+.text-xs {
+	font-size: 12px;
+	line-height: 1.3;
+	font-weight: 400;
 }
 .font-500{
 	font-weight: 500;
 }
-b, strong{
+b, strong, .font-700{
 	font-weight: 700;
 }
 .font-900{
@@ -42,11 +77,17 @@ b, strong{
 	text-transform: uppercase;
 }
 .wrapper{
+	overflow: hidden;
+	width: 100vw;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 }
 .container{
+	width: 100%;
+	max-width: 1220px;
+	padding: 0 10px;
+	margin: 0 auto;
 }
 .main{
 	flex: 1 0 auto;
@@ -70,36 +111,29 @@ b, strong{
 	justify-content: space-between;
 }
 
-.svg-sprite{
-	display: none;
+.accent{
+	color: var(--accent-color);
 }
-
-::-webkit-input-placeholder {  }
-::-moz-placeholder          {  } /* Firefox 19+ */
-:-moz-placeholder           {  } /* Firefox 18- */
-:-ms-input-placeholder      {  }
-
-// Для стилей автозаполнения полей
-// @-webkit-keyframes autofill {
-//     to {
-//         color: #fff;
-//         background: transparent;
-//     }
-// }
-
-// input:-webkit-autofill {
-//     -webkit-animation-name: autofill;
-//     -webkit-animation-fill-mode: both;
-// }
-
-/* хром, сафари */
-.element::-webkit-scrollbar { width: 0; }
-
-/* ie 10+ */
-.element { -ms-overflow-style: none; }
-
-/* фф (свойство больше не работает, других способов тоже нет)*/
-.element { overflow: -moz-scrollbars-none; }
-
+.grey{
+	color: var(--grey);
+}
+.grey-dark{
+	color: var(--grey-dark);
+}
+.text-light {
+	color: var(--light-color)
+}
+.footer {
+	position: relative;
+}
+.bottom-bg {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+	isolation: isolate;
+	pointer-events: none;
+	z-index: -1;
+}
 
 

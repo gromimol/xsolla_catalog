@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Graphik LC TT';
+    src: url('GraphikLCTT-Regular.woff2') format('woff2'),
+        url('GraphikLCTT-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Grotesk Medium 25';
+    src: url('SharpGroteskMedium25-Regular.woff2') format('woff2'),
+        url('SharpGroteskMedium25-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Grotesk';
+    src: url('SharpGroteskMedium20.woff2') format('woff2'),
+        url('SharpGroteskMedium20.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

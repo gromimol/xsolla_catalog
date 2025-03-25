@@ -1,0 +1,92 @@
+.first-screen {
+    position: relative;
+    padding-top: 6.4rem;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &::before {
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: linear-gradient(to bottom, rgba(34, 28, 48, .9) 20%, rgba(34, 28, 48, .5), rgba(34, 28, 48, 1) 100%);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        min-height: calc(480px - 6.4rem);
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        z-index: 1;
+        .h1 {
+            font-size: 7rem;
+            max-width: 91rem;
+        }
+    }
+    &__subtitle {
+        font-size: 2.4rem;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 1em;
+    }
+
+    .btns-container {
+        gap: max(12px, 1.5rem);
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.first-screen__content .h1,
+.first-screen__content .first-screen__subtitle,
+.first-screen__content .btns-container {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Класс, который будет добавлен с помощью JavaScript для анимации */
+.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Задержки для эффекта каскада */
+.first-screen__content .h1.animate-in {
+    transition-delay: 0s;
+}
+
+.first-screen__content .first-screen__subtitle.animate-in {
+    transition-delay: 0.2s;
+}
+
+.first-screen__content .btns-container.animate-in {
+    transition-delay: 0.4s;
+}
+
+/* Для плавной анимации при загрузке страницы */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

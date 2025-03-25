@@ -1,0 +1,134 @@
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-size: max(12px, 1.6rem);
+    font-weight: 500;
+    letter-spacing: .5px;
+    line-height: 1;
+    padding: 1.188em 2.5em;
+    border-radius: 16px;
+    color: var(--main-color);
+    background-color: var(--accent-color);
+    border: none;
+    transition: all .2s;
+    appearance: none;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &--grey {
+        background-color: var(--grey-dark);
+        color: #fff;
+
+        &:hover {
+            opacity: 1;
+            background: var(--accent-color);
+            color: var(--main-color)
+        }
+    }
+
+    &--opacity {
+        background-color: rgba(255,255,255, .15);
+        color: #fff;
+        &:hover {
+            opacity: 1;
+            background: var(--accent-color);
+            color: var(--main-color)
+        }
+    }
+
+    &--violet {
+        background: var(--violet);
+        color: #fff;
+    }
+    &--outline-violet {
+        background: transparent;
+        border: 2px solid var(--violet);
+        color: #876BFA;
+        &:hover {
+            opacity: 1;
+            background: var(--accent-color);
+            color: var(--main-color);
+            border-color: var(--accent-color)
+        }
+    }
+
+    &--lg {
+        width: 100%;
+        max-width: 60rem;
+        font-size: 2.4rem;
+        border-radius: 24px;
+    }
+    &--sm {
+        font-size: max(1.4rem, 12px);
+        padding: .79em 1.1428em;
+        border-radius: 6px;
+    }
+    &--full {
+        width: 100%;
+    }
+}
+.ripple {
+    position: absolute;
+    background-color: #678c1e;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+.btn-effect {
+    position: relative;
+    width: 100%;
+    max-width: 60rem;
+    .btn {
+        background: linear-gradient(to right, #C1F53D, #68FF0C);
+        z-index: 20;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        background: #3E6410;
+        pointer-events: none;
+        z-index: -1;
+        transition: all .2s;
+    }
+    &::after {
+        background: #1B3206;
+        z-index: -2;
+    }
+    &:hover {
+        .btn {
+            opacity: 1;
+        }
+    }
+    &:hover::before {
+        transform: scale(0.92) translate(0, -2rem);
+    }
+    &:hover::after {
+        transform: scale(0.85) translate(0, -4rem);
+    }
+}
+
+@keyframes ripple-animation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
